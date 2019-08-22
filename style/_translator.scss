@@ -1,10 +1,11 @@
 @mixin btnTransparent {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 15px;
     background: transparent;
     border: none;
     outline: none;
+    font-size: 16px;
 
     :active {
         color: red;
@@ -33,6 +34,8 @@
     .fromLanguage {
         display: flex;
         position: relative;
+        font-family: 'Noto Sans JP', sans-serif;
+        line-height: 1.5;
         
         button {
             @include btnTransparent;
@@ -43,6 +46,7 @@
     .toLanguage {
         display: flex;
         position: relative;
+        line-height: 1.5;
         
         button {
             @include btnTransparent;
@@ -72,12 +76,12 @@
     .is-reset {
         flex-grow: 1;
         direction: ltr;
-        background: lightcoral;
+        background-color: #243949;
     }
     
     .is-translate {
         flex-grow: 1;
         direction: ltr;
-        background: darkseagreen;
+        background-color: #243949;
     }
 }
