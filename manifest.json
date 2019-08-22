@@ -14,5 +14,11 @@
             },
             "description": "Open jp-en translate"
         }
+    },
+    "permissions": ["storage"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
     }
+
 }

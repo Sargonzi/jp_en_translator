@@ -7,14 +7,70 @@
 }
 
 body {
-  padding: 20px;
-  width: 200px;
+  padding: 20px 10px;
+  min-width: 400px;
   font-family: 'Poppins', sans-serif;
+}
+
+.translator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.translator textarea {
+  padding: 20px;
+  width: 100%;
+  margin: 10px 0 0 0;
+}
+
+.translator .fromLanguage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.translator .toLanguage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.btns button {
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  border: none;
+  font-size: 18px;
+}
+
+.btns .is-reset {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: lightcoral;
+}
+
+.btns .is-translate {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: lightblue;
 }
 /*# sourceMappingURL=style.css.map */
