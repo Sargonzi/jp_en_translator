@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,35 +10,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css">
     <title>Tanslator</title>
 </head>
+
 <body>
-    
+
     <div class="heading">
         <h2>Grace japanese utilities</h2>
         <i class='fa fa-ellipsis-v fa-lg'></i>
     </div>
     <div class="translator">
-        <p class="translator-title"><span class="flag-icon flag-icon-jp"></span>&nbsp;Japanese &lt;=&gt; <span class="flag-icon flag-icon-us"></span>&nbsp;English translator</p>
+        <p class="translator-title"><span class="flag-icon flag-icon-jp"></span>&nbsp;Japanese &lt;=&gt; <span
+                class="flag-icon flag-icon-us"></span>&nbsp;English translator</p>
         <div class="fromLanguage">
-            <textarea id="fromText" placeholder="Enter Japanese"></textarea>
-            <button><i class="fa fa-times"></i></button>
+            <textarea id="fromText" placeholder="Enter text"></textarea>
+            <button id="btnAudioJa"><i class="fa fa-volume-up"></i></button>
         </div>
-        
+
         <div class="toLanguage">
-            <textarea id="toText" placeholder="Enter English"></textarea>
-            <button><i class="fa fa-times"></i></button>
+            <textarea id="toText" placeholder="Translate"></textarea>
+
         </div>
-        
+
         <div class="btns">
             <button id="reset" class="is-reset"><i class="fa fa-trash"></i> Reset</button>
-            <button class="is-translate"><i class="fa fa-user"></i> Translate</button>
+            <button id="translate" class="is-translate"><i class="fa fa-user"></i> Translate</button>
         </div>
-        
+
     </div>
 
     <div class="footer">
-        <small> made with <span style="color: #e25555;">&hearts;</span> by <a href="mailto:zisarknar.me@gmail.com">Zi Sar K Nar</a> under <a href="#">MIT lincense</a></small><br/>
+        <small> made with <span style="color: #e25555;">&hearts;</span> by <a href="mailto:zisarknar.me@gmail.com">Zi
+                Sar K Nar</a> under <a href="#">MIT lincense</a></small><br />
         source code is hosted on <i class="fa fa-github"></i> <a href="#">github</a>
     </div>
     <script src="/app.js"></script>
 </body>
+
 </html>
