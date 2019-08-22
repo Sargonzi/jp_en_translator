@@ -1,31 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
-* {
-  padding: 0px;
-  margin: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  min-width: 400px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 10px;
-  color: white;
-  background-image: -webkit-gradient(linear, left top, right top, from(#243949), to(#517fa4));
-  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-  height: 50px;
-}
-
 .translator {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,12 +10,17 @@ body {
   padding: 20px 10px;
 }
 
+.translator .translator-title {
+  font-size: 14px;
+}
+
 .translator textarea {
   padding: 20px;
   width: 100%;
   margin: 10px 0 0 0;
   border-radius: 10px;
-  min-height: 50px;
+  min-height: 100px;
+  resize: vertical;
 }
 
 .translator .fromLanguage {
@@ -93,9 +71,41 @@ body {
   background: darkseagreen;
 }
 
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-width: 400px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#243949), to(#517fa4));
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  height: 50px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
 .footer {
   padding: 10px;
   width: 100%;
+  background: transparent;
   text-align: right;
 }
 /*# sourceMappingURL=style.css.map */

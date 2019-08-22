@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
+@import 'variables';
+@import 'translator';
+@import 'dictionary';
+
 *{
     padding: 0px;
     margin: 0px;
@@ -15,62 +19,16 @@ body {
     display: flex;
     flex-direction: row;
     padding: 10px;
+    width: 100%;
     color: white;
     background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
     height: 50px;
-}
-
-.translator {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 10px;
-
-    textarea{
-        padding: 20px;
-        width: 100%;
-        margin: 10px 0 0 0;
-        border-radius: 10px;
-        min-height: 50px;
-    }
-
-    .fromLanguage {
-        display: flex;
-    }
-
-    .toLanguage {
-        display: flex;
-    }
-}
-
-.btns {
-    display: flex;
-    flex-direction: column;
-    
-    button{
-        border-radius: 10px;
-        color: white;
-        font-weight: 700;
-        margin: 10px 0 0 0;
-        padding: 10px;
-        border: none;
-        font-size: 18px;
-    }
-
-    .is-reset {
-        flex-grow: 1;
-        direction: ltr;
-        background: lightcoral;
-    }
-
-    .is-translate {
-        flex-grow: 1;
-        direction: ltr;
-        background: darkseagreen;
-    }
+    align-items: stretch;
 }
 
 .footer {
     padding: 10px;
     width: 100%;
+    background: transparent;
     text-align: right;
 }
