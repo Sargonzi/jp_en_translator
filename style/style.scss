@@ -7,20 +7,30 @@
 }
 
 body {
-    padding: 20px 10px;
     min-width: 400px;
     font-family: 'Poppins', sans-serif;
+}
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    color: white;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    height: 50px;
 }
 
 .translator {
     display: flex;
     flex-direction: column;
+    padding: 20px 10px;
 
     textarea{
         padding: 20px;
         width: 100%;
         margin: 10px 0 0 0;
-        
+        border-radius: 10px;
+        min-height: 50px;
     }
 
     .fromLanguage {
@@ -48,11 +58,19 @@ body {
 
     .is-reset {
         flex-grow: 1;
+        direction: ltr;
         background: lightcoral;
     }
 
     .is-translate {
         flex-grow: 1;
-        background: lightblue;
+        direction: ltr;
+        background: darkseagreen;
     }
+}
+
+.footer {
+    padding: 10px;
+    width: 100%;
+    text-align: right;
 }
