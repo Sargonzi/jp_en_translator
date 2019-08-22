@@ -1,6 +1,18 @@
 {
     "manifest_version": 2,
-    "name": "Video downloader",
-    "description": "Download every embeded videos",
-    "version": "0.1"
+    "name": "Japanese English Translator",
+    "description": "Japanese to English, English to Japanese Translator using google translation api.",
+    "version": "0.1",
+    "browser_action": {
+        "default_popup": "index.html"
+    },
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+L",
+                "mac": "MacCtrl+Shift+L"
+            },
+            "description": "Open jp-en translate"
+        }
+    }
 }
