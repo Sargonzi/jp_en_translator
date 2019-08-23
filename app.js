@@ -17,30 +17,12 @@ document.getElementById('reset').addEventListener('click', () => {
 //make apiRequest
 const makeApiRequest = (data, method) => {
     let url = base_url + sourceLanguage + "&tl=" + targetLanguage + "&dt=t&q=" + encodeURI(data);
-    let xhr = new XMLHttpRequest();
-    xhr.open(method, url, true);
-    xhr.send();
-    xhr.onprogress = (e) => {
-
-    }
-    xhr.onload = (response) => {
-        if (xhr.status == 200) {
-            console.log(response);
-
-            translatedText = response[0][0][0];
-
-            var json = {
-                'sourceText': sourceText,
-                'translatedText': translatedText
-            };
-            langEN.value = JSON.stringify(json);
-        }
-    }
-
-    xhr.onerror = (error) => {
-
-    }
-
+    fetch(url)
+.then(response => response.json())
+.then(data => {
+  langEN.value = data[0][0][0]
+})
+.catch(error => console.error(error))
 }
 
 //make audio request
