@@ -1,26 +1,25 @@
-let langJP = document.getElementById('fromText');
-let langEN = document.getElementById('toText');
+let fromText = document.getElementById('fromText');
+let toText = document.getElementById('toText');
 let sourceLanguage = "ja";
 let targetLanguage = "en";
 
-const apiKey = "AIzaSyDmWyrzg-HnoTrrOufODeBdSYTGKmqA5Js";
 let base_url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=";
 let audio_url = "https://translate.google.com.vn/translate_tts?ie=UTF-8&q=";
 
 // reset contents
 document.getElementById('reset').addEventListener('click', () => {
     console.log("Reset button is clicked");
-    langJP.value = "";
-    langEN.value = "";
+    fromText.value = "";
+    toText.value = "";
 });
 
 //make apiRequest
 const makeApiRequest = (data, method) => {
     let url = base_url + sourceLanguage + "&tl=" + targetLanguage + "&dt=t&q=" + encodeURI(data);
-    fetch(url)
+ fetch(url)
 .then(response => response.json())
 .then(data => {
-  langEN.value = data[0][0][0]
+  toText.value = data[0][0][0];
 })
 .catch(error => console.error(error))
 }
@@ -51,16 +50,16 @@ const makeAudioRequest = (data) => {
 }
 
 document.getElementById('btnAudioJa').addEventListener('click', () => {
-    if (langJP.value != "") {
-        makeAudioRequest(langJP.value)
+    if (fromText.value != "") {
+        makeAudioRequest(fromText.value)
     } else {
         alert("message empty");
     }
 });
 
 document.getElementById('translate').addEventListener('click', () => {
-    if (langJP.value != "") {
-        makeApiRequest(langJP.value, "GET")
+    if (toText.value != "") {
+        makeApiRequest(toText.value, "GET")
     } else {
         alert("message empty");
     }
