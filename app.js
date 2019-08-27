@@ -38,6 +38,7 @@ const makeAudioRequest = (data) => {
         var source = context.createBufferSource();
         var request = new XMLHttpRequest();
         request.open('GET', url, true);
+        request.setRequestHeader("Content-Type", "application/json");
         request.responseType = 'arraybuffer';
         request.onload = function () {
             context.decodeAudioData(request.response, function (buffer) {
@@ -73,3 +74,7 @@ myInput.addEventListener('keyup', () => {
 function doneTyping () {
     makeApiRequest(fromText.value, "GET")
 }
+
+document.getElementById('btnAudioFrom').addEventListener('click', () => {
+    makeAudioRequest(fromText.value);
+});
