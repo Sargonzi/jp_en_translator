@@ -53,7 +53,23 @@ const makeAudioRequest = (data) => {
     }
 }
 
-document.getElementById('translate').addEventListener('click', () => {
-        makeApiRequest(fromText.value, "GET")
+let typingTimer;               
+let doneTypingInterval = 1000; 
+let myInput = document.getElementById('fromText');
+
+myInput.addEventListener('keyup', () => {
+    if(fromText.value != "") {
+    toText.placeholder = "Translating....";
+    } else {
+        toText.placeholder = "Translate";
+    }
+    clearTimeout(typingTimer);
+    if (myInput.value) {
+        typingTimer = setTimeout(doneTyping, doneTypingInterval);
+    }
 });
 
+
+function doneTyping () {
+    makeApiRequest(fromText.value, "GET")
+}
