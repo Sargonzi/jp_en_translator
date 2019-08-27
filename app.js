@@ -78,3 +78,11 @@ function doneTyping () {
 document.getElementById('btnAudioFrom').addEventListener('click', () => {
     makeAudioRequest(fromText.value);
 });
+
+document.getElementById('btnCopy').addEventListener('click', () => {
+    if (toText.value != null) {
+        toText.select();
+        document.execCommand("copy");
+        
+    }
+});
