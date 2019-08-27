@@ -19,7 +19,11 @@ const makeApiRequest = (data, method) => {
  fetch(url)
 .then(response => response.json())
 .then(data => {
-  toText.value = data[0][0][0];
+  let taranlatedText = "";
+  data[0].forEach(data => {
+    taranlatedText += data[0];
+  });
+  toText.value = taranlatedText;
 })
 .catch(error => console.error(error))
 }
