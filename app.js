@@ -49,20 +49,7 @@ const makeAudioRequest = (data) => {
     }
 }
 
-document.getElementById('btnAudioJa').addEventListener('click', () => {
-    if (fromText.value != "") {
-        makeAudioRequest(fromText.value)
-    } else {
-        alert("message empty");
-    }
-});
-
 document.getElementById('translate').addEventListener('click', () => {
-    if (toText.value != "") {
-        makeApiRequest(toText.value, "GET")
-    } else {
-        alert("message empty");
-    }
-
+        makeApiRequest(fromText.value, "GET")
 });
 
