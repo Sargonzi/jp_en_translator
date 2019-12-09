@@ -65,6 +65,7 @@ myInput.addEventListener('keyup', () => {
         toText.placeholder = "Translate";
     }
     clearTimeout(typingTimer);
+
     if (myInput.value) {
         typingTimer = setTimeout(doneTyping, doneTypingInterval);
     }
@@ -79,6 +80,9 @@ document.getElementById('btnAudioFrom').addEventListener('click', () => {
     makeAudioRequest(fromText.value);
 });
 
+/**
+ * copy translated text to clipboard
+ */
 document.getElementById('btnCopy').addEventListener('click', () => {
     if (toText.value != null) {
         toText.select();

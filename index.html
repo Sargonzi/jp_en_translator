@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
+    <!-- Font-awesome-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Custom css-->
     <link rel="stylesheet" href="/style/style.css">
+    <!-- Flag icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css">
     <title>Tanslator</title>
 </head>
@@ -14,9 +20,9 @@
 <body>
 
     <div class="heading">
-        <h2>Grace japanese utilities</h2>
-    
+        <h2 class="uk-text-lead">Grace japanese utilities</h2>
     </div>
+
     <div class="translator">
         <p class="translator-title"><span class="flag-icon flag-icon-jp"></span>&nbsp;Japanese &lt;=&gt; <span
                 class="flag-icon flag-icon-us"></span>&nbsp;English translator</p>
@@ -31,9 +37,8 @@
         </div>
 
         <div class="btns">
-            <button id="reset" class="is-reset">Reset</button>
+            <button id="reset" class="uk-button uk-button-primary uk-margin-small-top">Reset</button>
         </div>
-
     </div>
 
     <div class="footer">
@@ -41,7 +46,11 @@
                 Sar K Nar</a> under <a href="#">MIT lincense</a><br />
         source code is hosted on <i class="fa fa-github"></i> <a href="#">github</a>
     </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+    <!-- Custom js-->
     <script src="/app.js"></script>
 </body>
-
 </html>

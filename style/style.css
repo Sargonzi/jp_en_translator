@@ -36,16 +36,17 @@
 
 .translator .fromLanguage button {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 15px;
   background: transparent;
   border: none;
   outline: none;
+  margin: 10px 0 0 0;
   font-size: 20px;
 }
 
 .translator .fromLanguage button :active {
-  color: red;
+  color: grey;
 }
 
 .translator .toLanguage {
@@ -58,16 +59,17 @@
 
 .translator .toLanguage button {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 15px;
   background: transparent;
   border: none;
   outline: none;
+  margin: 10px 0 0 0;
   font-size: 20px;
 }
 
 .translator .toLanguage button :active {
-  color: red;
+  color: grey;
 }
 
 .btns {
@@ -78,37 +80,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.btns button {
-  border-radius: 10px;
-  color: white;
-  font-weight: 700;
-  margin: 10px 0 0 0;
-  padding: 10px;
-  border: none;
-  font-size: 18px;
-  outline: none;
-}
-
-.btns button :active {
-  color: black;
-}
-
-.btns .is-reset {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  direction: ltr;
-  background-color: #243949;
-}
-
-.btns .is-translate {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  direction: ltr;
-  background-color: #243949;
 }
 
 * {
@@ -133,13 +104,16 @@ body {
           flex-direction: row;
   padding: 10px;
   width: 100%;
-  color: white;
   background-image: -webkit-gradient(linear, left top, right top, from(#243949), to(#517fa4));
   background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   height: 50px;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+}
+
+.heading h2 {
+  color: white;
 }
 
 .footer {

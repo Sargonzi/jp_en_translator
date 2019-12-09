@@ -58,31 +58,4 @@
 .btns {
     display: flex;
     flex-direction: column;
-
-    button {
-        border-radius: 10px;
-        color: white;
-        font-weight: 700;
-        margin: 10px 0 0 0;
-        padding: 10px;
-        border: none;
-        font-size: 18px;
-        outline: none;
-
-        :active {
-            color: black;
-        }
-    }
-
-    .is-reset {
-        flex-grow: 1;
-        direction: ltr;
-        background-color: #243949;
-    }
-
-    .is-translate {
-        flex-grow: 1;
-        direction: ltr;
-        background-color: #243949;
-    }
 }
